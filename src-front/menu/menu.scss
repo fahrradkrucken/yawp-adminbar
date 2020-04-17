@@ -1,0 +1,58 @@
+// --
+// -- Menu Box
+// --
+
+.yawpab-box {
+  display: block;
+  position: fixed;
+  z-index: 20000;
+
+  left: -320px;
+  bottom: 96px;
+  width: 280px;
+  height: auto;
+  margin: 0!important;
+  padding: 15px;
+
+  background: $color-primary;
+  border-radius: 8px;
+  box-shadow: 0 0 4px 1px $color-secondary;
+
+  transition: .5s;
+
+  &__nav {
+    display: block;
+    position: relative;
+    width: 100%;
+
+    &-link {
+      display: flex!important;
+      flex: 0 1 auto;
+      flex-flow: row wrap;
+
+      align-items: center;
+      align-content: center;
+
+      width: 100%;
+      padding: 8px 0 8px 0;
+
+      text-decoration: none!important;
+      color: $color-secondary-dark;
+      font-size: $font-size;
+
+      &-txt {
+        display: block;
+      }
+      &-icon {
+        display: block;
+        width: $icon-size;
+        height: $icon-size;
+        padding-right: 16px;
+
+        * {
+          font-size: $icon-size;
+        }
+      }
+    }
+  }
+}

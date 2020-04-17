@@ -1,3 +1,17 @@
 @import "vars";
+
+.yawpab-switch {
+  display: none!important;
+
+  &:checked {
+    ~ .yawpab-toggle .yawpab-toggle__icon::before {
+      content: "\f335";
+    }
+    ~ .yawpab-box {
+      left: 24px;
+    }
+  }
+}
+
 @import "toggle/toggle";
 @import "menu/menu";

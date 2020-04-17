@@ -1,0 +1,53 @@
+// --
+// -- Toggle
+// --
+
+.yawpab-toggle {
+  display: flex!important;
+  flex: 0 1 auto;
+  flex-flow: row wrap;
+
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+
+  position: fixed;
+  z-index: 20000;
+
+  left: 24px;
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+  margin: 0!important;
+  padding: 0!important;
+
+  background: $color-primary;
+  border-radius: 50%;
+  border: 1px solid $color-secondary-dark;
+
+  cursor: pointer;
+  transition: .25s;
+
+  &__icon {
+    display: block;
+    position: relative;
+    margin: auto auto!important;
+    text-align: center;
+  }
+
+  &__icon::before {
+    content: "\f111";
+    display: block;
+
+    font-family: 'dashicons';
+    font-size: $icon-size;
+    color: $color-secondary-dark;
+
+    transition: .25s;
+  }
+
+  &:hover .yawpab-toggle__icon::before {
+    color: $color-secondary;
+  }
+}

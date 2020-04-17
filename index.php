@@ -12,8 +12,10 @@ if (!function_exists('yawpab_bootstrap')) {
     add_action('init', 'yawpab_bootstrap');
     function yawpab_bootstrap()
     {
+        define('YAWPAB_PLUGINN_DIR', plugin_dir_path(__FILE__));
+        define('YAWPAB_PLUGINN_URL', plugin_dir_url(__FILE__));
         if (!class_exists('YAWPAdminBar')) {
-            require plugin_dir_path(__FILE__ . 'src' . DIRECTORY_SEPARATOR . 'YAWPAdminBar.php');
+            require YAWPAB_PLUGINN_DIR . 'src' . DIRECTORY_SEPARATOR . 'YAWPAdminBar.php';
             (new YAWPAdminBar())->bootstrap();
         }
     }
